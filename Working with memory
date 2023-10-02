@@ -110,23 +110,16 @@ public:
             str.buffer = new_buffer;
             new_buffer = new char[size *=2];
             strcpy(new_buffer, str.buffer);
-            delete[] str.buffer;
-            
-            
-            
+            delete[] str.buffer;    
         }
         new_buffer[i++] = ch;
     }
-    
     new_buffer[i] = '\0';
     str.buffer = new_buffer;
     str.size = i;
 
     return in;
-}
-
-
-    
+    } 
 };
 
 int main() {
@@ -135,10 +128,7 @@ int main() {
 
     cout << "Введи строку для склейки: ";
     cin >> str2;
-
     str1 += str2;
-
     cout << "Результат склейки: " << str1 << endl;
-
     return 0;
 }
